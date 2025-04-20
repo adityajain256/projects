@@ -1,0 +1,84 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: antiquewhite;
+    padding: 50px;
+}
+
+
+.headerDark{
+    background-color: dimgray;
+    color: antiquewhite;
+}
+.light{
+    background-color: rgb(0, 0, 0);
+    color: beige;
+    /* border-radius: 12px;
+    padding: 6px; */
+}
+.dark{
+    background-color: beige;
+    color: black;
+}
+
+.count{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+    justify-content: space-between;
+    padding: 90px;
+    background-color: rgb(215, 169, 101);
+}
+.countDark{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+    justify-content: space-between;
+    padding: 90px;
+    background-color: rgb(149, 89, 0);
+}
+
+.h3{
+    font-size: 64px;
+}
+.h3Dark{
+    color: beige;
+}
+
+#inc{
+    height: max-content;
+    width: max-content;
+    border-radius: 12px;
+    padding: 10px;
+
+}
+#inc:hover{
+    background-color: rgb(189, 112, 10);
+    font-size: 15px;
+
+}
+#reset:hover{
+    background-color: rgb(189, 112, 10);
+    font-size: 15px;
+
+}
+#inc:active{
+    background-color: black;
+    color: aliceblue;
+}
+#reset:active{
+    background-color: black;
+    color: aliceblue;
+}
+
+#reset{
+    height: max-content;
+    width: max-content;
+    border-radius: 12px;
+    padding: 5px 20px 5px 20px ;
+}
+
