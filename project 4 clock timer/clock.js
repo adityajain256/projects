@@ -6,6 +6,7 @@ let startBtn = document.querySelector("#start");
 let stopBtn = document.querySelector("#stop");
 let resetBtn = document.querySelector("#reset");
 let history = document.querySelector("#history");
+let lapBtn = document.querySelector("#lap");
 let dateValue = new Date();
 
 date.innerText = `${dateValue.getDate()}/${dateValue.getMonth() + 1}/${dateValue.getFullYear()}`;
@@ -40,11 +41,16 @@ startBtn.addEventListener("click",() => {
 stopBtn.addEventListener('click', (() => {
     clearInterval(id);
 
+    
+    startBtn.disabled = false;
+}))
+
+lapBtn.addEventListener('click', (() => {
     let newLine = document.createElement("li");
     newLine.innerText = `Hour: ${countHour} Minute: ${countMin} Second: ${count}`;
     history.appendChild(newLine);
-    startBtn.disabled = false;
-}))
+
+}));
 
 resetBtn.addEventListener('click', (() => {
     clearInterval(id);
