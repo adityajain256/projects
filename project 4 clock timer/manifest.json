@@ -1,0 +1,9 @@
+{
+    "menifest_version": 3,
+    "name": "Clock Timer",
+    "version": "1.0",
+    "description": "A simple clock timer app",
+    "action": {
+        "default_popup": "clock.html"
+    }
+}
