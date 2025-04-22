@@ -1,5 +1,5 @@
 {
-    "menifest_version": 3,
+    "manifest_version": 3,
     "name": "Clock Timer",
     "version": "1.0",
     "description": "A simple clock timer app",
@@ -7,3 +7,5 @@
         "default_popup": "clock.html"
     }
 }
+
+  
