@@ -16,6 +16,7 @@ let countMin = 0;
 let countHour = 0;
 let id;
 startBtn.addEventListener("click",() => {
+    startBtn.classList.add("hide");
     id = setInterval(() => {
         count++;
         if(count == 60){
@@ -40,9 +41,9 @@ startBtn.addEventListener("click",() => {
 
 stopBtn.addEventListener('click', (() => {
     clearInterval(id);
-
-    
     startBtn.disabled = false;
+    startBtn.classList.remove("hide");
+    startBtn.innerText = "Resume";
 }))
 
 lapBtn.addEventListener('click', (() => {
