@@ -46,8 +46,9 @@ stopBtn.addEventListener('click', (() => {
     startBtn.innerText = "Resume";
 }))
 
+let newLine;
 lapBtn.addEventListener('click', (() => {
-    let newLine = document.createElement("li");
+    newLine = document.createElement("li");
     newLine.innerText = `Hour: ${countHour} Minute: ${countMin} Second: ${count}`;
     history.appendChild(newLine);
 
@@ -62,5 +63,9 @@ resetBtn.addEventListener('click', (() => {
     minute.innerText = countMin;
     hour.innerText = countHour;
     startBtn.disabled = false;
+    startBtn.classList.remove("hide");
+    history.innerText = ""
+    startBtn.innerText = "Start"
+
 
 }))
