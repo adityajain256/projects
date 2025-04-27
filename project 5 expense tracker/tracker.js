@@ -1,6 +1,7 @@
-let theme = document.querySelector("#theme");
-let body = document.querySelector('body')
 // theme changing button
+let theme = document.querySelector("#theme");
+let body = document.querySelector('body');
+
 theme.addEventListener('click',()=>{
     theme.classList.toggle("dark");
     body.classList.toggle("darkBody");
@@ -8,13 +9,12 @@ theme.addEventListener('click',()=>{
 
 // creating global variable 
 let arr = []
-
+let newArr;
 //try to showcase reale time date and month in month section 
 let monthH = document.querySelector("#h");
-
 let my = new Date()
+monthH.innerText = my;
 
-monthH.innerText = my
 // let month = document.querySelector("#month");
 let date = document.querySelector("#inpDate");
 let spent = document.querySelector("#inpAmount");
@@ -22,22 +22,16 @@ let description = document.querySelector('#inpDes');
 let enter = document.querySelector("#enterBtn");
 let mainbody = document.querySelector('main');
 let newDiv;
-
+let history = document.querySelector('#history');
 
 enter.addEventListener("click", ()=>{
 
     // creating small name variable for input values 
-    // let monthV = month.value;
     let dateV = date.value;
     let spentV = spent.value;
     let desV = description.value;
     let userExpense;
     let data;
-
-    // checking condition whether every thing is filled or not  
-    // if(monthV == ''){
-    //     // alert("Enter motnh");
-    // }
     if(dateV == ''){
         alert("Enter date");
     }
@@ -52,44 +46,42 @@ enter.addEventListener("click", ()=>{
 
         // storing data inside local storage 
         userExpense = { "date": dateV, "amount": spentV, "description": desV};
-
         localStorage.setItem('userExpense', JSON.stringify(userExpense));
-
-        data = JSON.parse(localStorage.getItem('userExpense'))
-
-        // console.log(data.month);
+        data = JSON.parse(localStorage.getItem('userExpense'));
 
         // push data inside an array 
-        arr.push(data);
+        arr.push(data); 
         newDiv = document.createElement('div');
         newDiv.style.display = "flex"
         newDiv.style.flexDirection = 'row'
     
         newDiv.innerHTML = `
-              <div id="date">
+            <div id="date">
                 <h1>${data.date}</h1>
-                
               </div>
               <div id="amount">
                 <h1>${data.amount}</h1>
-                
               </div>
               <div id="Description">
-                <h1>${data.description}</h1>
-                
-              </div>` 
+                <h1>${data.description}</h1>               
+            </div>` 
     
-        mainbody.after(newDiv);
+        history.appendChild(newDiv);
     }
+    // saving global arr inside an newArr 
     localStorage.setItem('arr', JSON.stringify(arr));
     newArr = JSON.parse(localStorage.getItem('arr'));
     console.log(newArr);
-
 });
 
+//creating delete button's logic
 let dele = document.querySelector('#deleteBtn');
 
-dele.addEventListener('click', ()=>{
-    newDiv.innerHTML = '';
-    localStorage.removeItem(newArr.data)
-})
+// i just reload the window so that everything got restart but i am also thinking that this button is not the last logic i should have to write few more code for it so that it can be a perfect expance tracker
+function delee(){
+    window.location.reload();
+}
+
+dele.addEventListener('click', delee);
+
+// day 27-04-2025 ends and it's alredy 28-04-2025 next time i will work on sum of the expence facility 
