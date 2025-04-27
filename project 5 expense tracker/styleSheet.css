@@ -1,0 +1,104 @@
+.lightBody{
+    display: flex;
+    flex-direction: column;
+    background-color: bisque;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+.darkBody{
+    background-color: grey;
+    color: rgb(255, 255, 255);
+}
+#hConatainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 10px;
+}
+
+.light{
+
+    background-color: rgb(61, 1, 1);
+    color: azure;
+    border: 2px solid grey;
+    border-radius: 6px;
+    padding: 4px;
+    box-shadow: 5px 8px 10px 1px black;
+
+}
+
+.dark{
+    background-color: wheat;
+    color: black;
+    border: 2px solid grey;
+    border-radius: 6px;
+    padding: 4px;
+    /* box-shadow: 5px 8px 10px 1px rgb(255, 114, 114); */
+}
+
+.month{
+    margin: 12px;
+    margin-left: 88px;
+    border-style: none;
+    font-size: larger;
+}
+
+#mContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 12px;
+    margin-top: 2rem;
+}
+
+
+
+main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* width: 100vw; */
+    height: 9rem;
+    margin-top: 4rem;
+
+}
+
+#date{
+    width: 30vw;
+    margin-left: 7rem;
+}
+
+#amount{
+    width: 30vw;
+
+}
+
+#Description{
+    width: 40vw;
+}
+
+.input{
+    border-style: none;
+    padding: 10px;
+    font-size: 17px;
+}
+
+.enter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    /* width: 100vw;
+    height: 90px; */
+    margin-top: 5rem;
+
+}
+
+.enterbtn{
+    font-size: 23px;
+    padding: 12px;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styleSheet.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body class="lightBody">
+    <header>
+      <div id="hConatainer">
+        <h1>Expence tracker web app</h1>
+        <button id="theme" class="light">dark</button>
+      </div>
+    </header>
+
+    <div id="mContainer">
+      <h3>Real Time</h3>
+      <!-- <input type="month" id="month" class="month" /> -->
+      <h1 id="h"></h1>
+
+      <button class="enterbtn , light" id="deleteBtn">Delete</button>
+    </div>
+
+        <main>
+          <div id="date">
+            <h1>Date</h1>
+            <input type="date" id="inpDate" class="input">
+          </div>
+          <div id="amount">
+            <h1>Spent</h1>
+            <input type="number" placeholder="Amount" id="inpAmount" class="input">
+          </div>
+          <div id="Description">
+            <h1>Description</h1>
+            <input type="text" placeholder="Description" id="inpDes" class="input">
+          </div>
+
+ 
+          <div class="enter">
+              <button id="enterBtn" class="light , enterbtn">Enter</button>
+          </div>
+        </main>
+
+    <script src="tracker.js"></script>
+  </body>
+</html>
