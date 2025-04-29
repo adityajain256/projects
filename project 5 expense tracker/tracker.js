@@ -67,12 +67,52 @@ enter.addEventListener("click", ()=>{
             </div>` 
     
         history.appendChild(newDiv);
+
+        if(enter){
+            spent.value = ''
+            description.value = ''
+        }
     }
     // saving global arr inside an newArr 
     localStorage.setItem('arr', JSON.stringify(arr));
     newArr = JSON.parse(localStorage.getItem('arr'));
     console.log(newArr);
-});
+    
+})
+
+
+
+// i can not understand what kind of mistake i am making but i will 
+
+let sumo = document.querySelector('#sum');
+function addd(){
+    let amountt;
+    let sume = 0;
+    let i = 0;
+    while(i<length.newArr){
+        amountt[i] =  Number(newArr[i].amount);
+
+        sume += amountt[i];
+        i++;
+
+    }
+    console.log(typeof newArr[1].amount)
+    console.log(amountt);
+    console.log(typeof amountt);
+    console.log(amountt + 10)
+    console.log(sume);
+    console.log(typeof sume);
+    
+    
+    console.log(sume)
+}
+sumo.addEventListener('click', addd);
+
+
+
+
+
+
 
 //creating delete button's logic
 let dele = document.querySelector('#deleteBtn');
@@ -85,3 +125,8 @@ function delee(){
 dele.addEventListener('click', delee);
 
 // day 27-04-2025 ends and it's alredy 28-04-2025 next time i will work on sum of the expence facility 
+
+
+    console.log("aditya jain");
+
+

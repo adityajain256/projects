@@ -107,3 +107,8 @@ main{
     height: 50px;
 
 }
+
+.sum{
+    position: relative;
+    margin: 10px;
+}
