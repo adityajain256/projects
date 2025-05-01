@@ -111,4 +111,83 @@ main{
 .sum{
     position: relative;
     margin: 10px;
+    background-color: black;
+    padding: 10px;
 }
+
+#sumo{
+    height: 10px;
+    background-color: black;
+}
+
+/* Mobile display styles */
+@media (max-width: 768px) {
+    .lightBody, .darkBody {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    #hConatainer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5px;
+    }
+
+    .light, .dark {
+        font-size: 14px;
+        padding: 6px;
+        box-shadow: none;
+    }
+
+    .month {
+        margin: 8px;
+        margin-left: 20px;
+        font-size: medium;
+    }
+
+    #mContainer {
+        margin: 8px;
+        margin-top: 1rem;
+    }
+
+    main {
+        flex-direction: column;
+        height: auto;
+        margin-top: 2rem;
+    }
+
+    #date, #amount, #Description {
+        width: 90%;
+        margin: 5px auto;
+    }
+
+    .input {
+        font-size: 15px;
+        padding: 8px;
+    }
+
+    .enter {
+        margin-top: 2rem;
+        padding: 8px;
+    }
+
+    .enterbtn {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    #history {
+        height: auto;
+        padding: 10px;
+    }
+
+    .sum {
+        margin: 5px;
+        padding: 8px;
+    }
+
+    #sumo {
+        height: 5px;
+    }
+}
+

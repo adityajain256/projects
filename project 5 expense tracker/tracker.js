@@ -7,6 +7,8 @@ theme.addEventListener('click',()=>{
     body.classList.toggle("darkBody");
 });
 
+
+
 // creating global variable 
 let arr = []
 let newArr;
@@ -80,25 +82,29 @@ enter.addEventListener("click", ()=>{
     
 })
 
+// using local storage to show data 
 
 
 // i can not understand what kind of mistake i am making but i will 
-
 let sumo = document.querySelector('#sum');
 function addd(){
-    let amountt;
+    let amountt = [];
     let sume = 0;
     let i = 0;
-    while(i<length.newArr){
+    while(i< newArr.length){
         amountt[i] =  Number(newArr[i].amount);
 
         sume += amountt[i];
         i++;
 
     }
-    console.log(typeof newArr[1].amount)
+    sumo.innerText = `Total spent: ${sume}`;
+
+
+
+    console.log("newArr.amount= "+ typeof newArr[1].amount)
     console.log(amountt);
-    console.log(typeof amountt);
+    console.log( typeof amountt);
     console.log(amountt + 10)
     console.log(sume);
     console.log(typeof sume);
@@ -114,12 +120,14 @@ sumo.addEventListener('click', addd);
 
 
 
+
 //creating delete button's logic
 let dele = document.querySelector('#deleteBtn');
 
 // i just reload the window so that everything got restart but i am also thinking that this button is not the last logic i should have to write few more code for it so that it can be a perfect expance tracker
 function delee(){
     window.location.reload();
+    localStorage.clear(newArr)
 }
 
 dele.addEventListener('click', delee);
@@ -129,4 +137,31 @@ dele.addEventListener('click', delee);
 
     console.log("aditya jain");
 
+// Show saved expenses when the page loads
+window.addEventListener('DOMContentLoaded', () => {
+    let savedArr = JSON.parse(localStorage.getItem('arr')) || [];
+
+    savedArr.forEach((data) => {
+        let newDiv = document.createElement('div');
+        newDiv.style.display = "flex";
+        newDiv.style.flexDirection = "row";
+
+        newDiv.innerHTML = `
+            <div id="date">
+                <h1>${data.date}</h1>
+            </div>
+            <div id="amount">
+                <h1>${data.amount}</h1>
+            </div>
+            <div id="Description">
+                <h1>${data.description}</h1>
+            </div>
+        `;
+
+        history.appendChild(newDiv);
+    });
+
+    // Update global arr variable
+    arr = savedArr;
+});
 
